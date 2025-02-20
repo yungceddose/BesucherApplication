@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/webstorm-icon-logo.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Besucher-System</title>
+  <link rel="stylesheet" href="/src/style.css">
+
+
+</head>
+<body style="background-color:black;">
+<div id="website">
+<div class="überschrift">
+  <div id="erwartet-überschrift" class="überschrift-format"><h1>Erwartet</h1></div>
+  <div id="anwesend-überschrift" class="überschrift-format"><h1>Anwesend</h1></div>
+  <div id="verlassen-überschrift" class="überschrift-format"><h1>Verlassen</h1></div>
+</div>
+
+<div class="container">
+  <div class="box" id="box-left"></div>
+  <div class="box" id="box-center"></div>
+  <div class="box" id="box-right"></div>
+  <div  class="box" id="box-delete"><h3>LÖSCHEN</h3></div>
+</div>
+
+
+
+
+
+<form>
+  <label for ="guest-type">Was für ein Gast?</label>
+  <select name="guest-type" id="guest-type">
+    <option value="VIP">VIP</option>
+    <option value="Handwerker">Handwerker</option>
+    <option value="Probearbeiter">Probearbeiter</option>
+    <option value="Besucher">Besucher</option>
+  </select>
+  <label for="eingabe"></label>
+  <input type="text" name="eingabe" id="eingabe" placeholder="Name">
+  <button type="button" id="erwartet-button">Erwartet</button>
+  <button type="button" id="anwesend-button">Anwesend</button>
+  <button type="button" id="verlassen-button">Gebäude verlassen</button>
+  <button type="button" id="löschen-button">Löschen</button>
+  <button type="button" id="speichern-button">Daten speichern</button>
+  <button type="button" id="laden-button">Daten abrufen</button><br>
+  <input type="text" name="sucheGast" id="sucheGast" placeholder="Nach Name suchen">
+  <button type="button" id="filter-button">Filtern</button>
+  <button type="button" id="clear-filter-button">Clear</button>
+</form>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

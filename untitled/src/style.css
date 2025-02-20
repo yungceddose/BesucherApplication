@@ -1,0 +1,180 @@
+h1 {
+    font-size: 30px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    padding:10px;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 50px;
+    color:white;
+}
+
+.table-left {
+    padding-right: 270px;
+    padding-left: 140px;
+    color: grey;
+    border-radius: 20px;
+    border: 1px solid grey;
+
+}
+.table-right {
+    padding-left: 300px;
+    padding-right: 100px;
+    color: red;
+
+}
+
+.table-middle {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: mediumseagreen;
+}
+
+.table-left, .table-right, .table-middle {
+    margin: 0 auto;
+    display: inline-block;
+}
+
+
+th{
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container{
+    width:95%;
+    margin-bottom:30px;
+    max-height:555px;
+    background-color:#2A2B28;
+    margin-left:auto;
+    margin-right:auto;
+    border-radius: 5px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.box {
+    height : 500px;
+    display: flex;
+    width: 28.5%;
+    margin: 25px;
+    background-color: #41413E;
+    border-radius: 5px;
+    padding:1px;
+    overflow-y:auto;
+    flex-direction: column;
+}
+
+#box-center{
+    max-height: 390px;
+}
+
+
+form{
+    text-align: center;
+}
+
+#erwartet-button{
+    color:black;
+    background-color: #DBDBDB;
+    border-color: #DBDBDB;
+}
+
+#anwesend-button{
+    color:black;
+    background: #33F961;
+    border-color: #33F961;
+}
+
+#verlassen-button{
+    color: black;
+    background-color: #F6434F;
+    border-color: #F6434F;
+}
+
+#löschen-button{
+    color: black;
+    background-color: #D5EF55;
+    border-color: #D5EF55;
+}
+
+#sharepoint-button{
+    color: black;
+    background-color: lightblue;
+    border-color:lightblue;
+}
+
+.guest-div{
+    display: flex;
+    gap:20px;
+}
+
+h2{
+    width: 28.5%;
+}
+
+.überschrift{
+    color: white;
+    display: flex;
+    justify-content: center;
+    width:95%;
+    text-align: center;
+}
+.überschrift-format{
+    padding-left: 11%;
+    padding-right: 11%;
+    display: flex;
+}
+
+.guest-element{
+    text-align: center;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: black;
+}
+
+#website{
+    max-height: 100%;
+}
+
+#box-delete{
+    height: 120px;
+    position: absolute;
+    display: flex;
+    border:1px solid white;
+    order:4;
+    align-self: center;
+    margin-top: 26.1%;
+}
+
+#sucheGast{
+    margin-top: 10px;
+}
+
+#filter-button{
+    background-color: dodgerblue;
+    border-color: dodgerblue;
+}
+
+#clear-filter-button{
+    background-color:#75afc7;
+    border-color:#75afc7;
+}
+
+#speichern-button{
+    background-color: #59e3b3;
+    border-color: #59e3b3;
+}
+
+#laden-button{
+    background-color: #59e3b3;
+    border-color: #59e3b3;
+}
