@@ -1,3 +1,5 @@
+/*
+// !
 // Event-Listener für die Buttons
 document.getElementById('erwartet-button').addEventListener('click', function () {
   addUserToBox('box-left');
@@ -32,7 +34,7 @@ document.getElementById("clear-filter-button").addEventListener("click", functio
 });
 
 
-
+// !
 // Filter leeren
 function clearFilter(){
   let containers=getAllContainers();
@@ -47,8 +49,8 @@ function clearFilter(){
 }
 
 
+// !
 // Namen (Daten) filtern
-
 function filterData(){
   let containers=getAllContainers();
   let filter=document.getElementById("sucheGast").value.trim();
@@ -66,8 +68,8 @@ function filterData(){
   }
 }
 
+// !
 // Daten im Browser speichern
-
 function saveData(){
   localStorage.setItem("erwartet", document.getElementById("box-left").innerHTML);
   localStorage.setItem("anwesend", document.getElementById("box-center").innerHTML);
@@ -75,8 +77,8 @@ function saveData(){
   console.log("Daten gespeichert");
 }
 
+// !
 // Daten aus dem Browserspeicher holen
-
 function loadData(){
 
   const erwartet=localStorage.getItem("erwartet");
@@ -101,7 +103,7 @@ function loadData(){
 }
 
 
-
+// !
 // Funktion zum verarbeiten der Klicks
 
 function addUserToBox(target){
@@ -120,7 +122,7 @@ function addUserToBox(target){
 }
 
 
-
+// !
 // Create Element Funktion
 
 function createElement(eingabe,target){
@@ -155,7 +157,7 @@ function createElement(eingabe,target){
 
 }
 
-
+// !
 // Check if guest exists
 
 function checkIfGuestExistsInContainer(target, newElement){
@@ -181,6 +183,7 @@ function checkIfGuestExistsInContainer(target, newElement){
 
 }
 
+// !
 // Löschen Button Logik
 function deleteButton(){
   let containers=getAllContainers();
@@ -199,7 +202,7 @@ function deleteButton(){
 
 }
 
-
+// !
 // Gast in anderen Container verschieben
 
 function moveGuest(oldContainer, newContainer, newElement){
@@ -210,24 +213,27 @@ function moveGuest(oldContainer, newContainer, newElement){
 }
 
 
-
+// !
 function getAllContainers(){
   let containers=document.getElementsByClassName("box");
 
   return containers;
 }
 
+// !
 // Funktion um das Eingabefeld zu leeren
 function deleteEingabe(){
   document.getElementById("eingabe").value="";
 }
 
+// !
 // Funktion um Elemente zu löschen aus einem bestimmten Container
 function deleteElement(element, target){
   let name=element.id;
   target.removeChild(document.getElementById(name));
 }
 
+// !
 // Funktion, um Drag- and Drop Elemente hinzuzufügen
 function addDragAndDropListeners(draggableElement) {
   draggableElement.setAttribute('draggable', 'true');
@@ -238,7 +244,7 @@ function addDragAndDropListeners(draggableElement) {
   });
 }
 
-
+// !
 // Drop Container
 const dropContainer = document.getElementById('box-delete');
 dropContainer.addEventListener('dragover', function (event) {
@@ -258,6 +264,8 @@ dropContainer.addEventListener('drop', function (event) {
 
 });
 
+
+// !
 // Füge das Drag-Start-Event hinzu
 document.querySelectorAll('.draggable').forEach(item => {
   item.addEventListener('dragstart', function (event) {
@@ -288,7 +296,7 @@ document.querySelectorAll('.box').forEach(container => {
   });
 });
 
-
+*/
 
 
 

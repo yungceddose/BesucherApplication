@@ -8,7 +8,7 @@ h1 {
 
 h3 {
     text-align: center;
-    margin-top: 50px;
+    margin:auto;
     color:white;
 }
 
@@ -47,22 +47,24 @@ th{
 }
 
 .container{
-    width:95%;
-    margin-bottom:30px;
+    width:100%;
+    max-width: 1200px;
+    height: 30%;
     max-height:555px;
-    background-color:#2A2B28;
-    margin-left:auto;
-    margin-right:auto;
+    border: 1px solid grey;
     border-radius: 5px;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin: auto;
+
 }
 
 
 .box {
+    max-width: 400px;
     height : 500px;
-    display: flex;
+    display:inline-block;
     width: 28.5%;
     margin: 25px;
     background-color: #41413E;
@@ -70,10 +72,11 @@ th{
     padding:1px;
     overflow-y:auto;
     flex-direction: column;
+
 }
 
 #box-center{
-    max-height: 390px;
+
 }
 
 
@@ -124,13 +127,15 @@ h2{
     color: white;
     display: flex;
     justify-content: center;
-    width:95%;
+    width:70%;
     text-align: center;
+    margin:auto;
 }
 .überschrift-format{
     padding-left: 11%;
     padding-right: 11%;
     display: flex;
+
 }
 
 .guest-element{
@@ -146,13 +151,20 @@ h2{
 }
 
 #box-delete{
-    height: 120px;
-    position: absolute;
-    display: flex;
+    height: 5vw;
+    width: 20vw;
+    max-width: 20vw;
+    max-height: 5vw;
     border:1px solid white;
-    order:4;
     align-self: center;
-    margin-top: 26.1%;
+
+    margin:auto;
+    text-align: center;
+    overflow-y: hidden;
+    display: flex;
+    margin-top:1vw;
+    margin-bottom:1vw;
+
 }
 
 #sucheGast{
