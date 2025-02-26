@@ -1,3 +1,6 @@
+
+let elementArr=[];
+
 // Funktion zum verarbeiten der Klicks
 
 function addUserToBox(target){
@@ -29,9 +32,10 @@ function elementManipulation(eingabe, target){
   newElement.className="draggable";
   newElement.draggable=true;
   newElement.textContent=elementId;
-  newElement.classList.add("guest-element");
-  newElement.classList.add(guestType);
-
+  newElement.setAttribute("name",eingabe.trim());
+  newElement.setAttribute("guestType",guestType);
+  newElement.setAttribute("date", date.toString());
+  newElement.setAttribute("container", target.id);
 
 
   // Drag-Event hinzufügen
@@ -44,6 +48,8 @@ function elementManipulation(eingabe, target){
   }else{
     console.log("Guest does not exist");
     document.getElementById(target).appendChild(newElement);
+    elementArr.push(newElement);
+    console.log(elementArr.length);
   }
 
 
@@ -54,7 +60,7 @@ function elementManipulation(eingabe, target){
 function deleteButton(){
   let containers=getAllContainers();
   let name=document.getElementById("eingabe").value;
-
+  console.log("deleteElement aufgerufen");
   for(let i=0; i<containers.length;i++){
     for(let j=0;j<containers[i].children.length;j++){
       if(containers[i].children[j].id===name){
@@ -78,7 +84,15 @@ function deleteEingabe(){
 function deleteElement(element, target){
   let name=element.id;
   target.removeChild(document.getElementById(name));
+  for(let i=0; i<elementArr.length; i++){
+    if(elementArr[i].getAttribute("name")===name){
+      elementArr.splice(i,1);
+      console.log("Element gelöscht");
+    }
+  }
 }
+
+
 
 // Import Functions
 import {getAllContainers, checkIfGuestExistsInContainer, moveGuest} from './containerLogic.js';

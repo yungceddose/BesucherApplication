@@ -7,6 +7,7 @@ function getAllContainers(){
 // Gast in anderen Container verschieben
  function moveGuest(oldContainer, newContainer, newElement){
 
+
   deleteElement(newElement,oldContainer);
   document.getElementById(newContainer).appendChild(newElement);
   return true;

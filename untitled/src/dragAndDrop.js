@@ -41,6 +41,7 @@ dropContainer.addEventListener('drop', function (event) {
   // Entferne dragged Element
   if (element) {
     element.remove();
+
   }
 
 
@@ -58,7 +59,7 @@ function addDragAndDropListeners(draggableElement) {
 }
 
 // Import Functions
-
+import {deleteElement} from './elementManipulation.js';
 
 // Export Functions
 export {addDragAndDropListeners};
