@@ -8,7 +8,7 @@ function addUserToBox(target){
   if(userInput.value!==""){
     elementManipulation(input,target);
     userInput.value="";
-    saveData();
+
   }else{
     alert("Bitte etwas eingeben!");
   }
@@ -63,7 +63,7 @@ function deleteButton(){
     }
   }
 
-  saveData();
+
   deleteEingabe();
 
 }
@@ -82,6 +82,6 @@ function deleteElement(element, target){
 
 // Import Functions
 import {getAllContainers, checkIfGuestExistsInContainer, moveGuest} from './containerLogic.js';
-import {saveData} from './browserStorage.js';
+
 // Export Functions
 export {deleteElement, deleteButton, elementManipulation, addUserToBox};

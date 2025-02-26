@@ -7,7 +7,6 @@ function clearFilter(){
       containers[i].children[j].style.color="white";
     }
   }
-  saveData();
 
 }
 
@@ -35,7 +34,6 @@ function filterData(){
 
 // Import Functions
 import {getAllContainers} from './containerLogic.js';
-import {saveData} from './browserStorage.js';
 
 
 // Export Functions

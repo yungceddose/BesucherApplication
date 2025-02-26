@@ -20,10 +20,10 @@ document.querySelectorAll('.box').forEach(container => {
     // Nur ablegen, wenn der Drop-Bereich eine Box ist
     if (event.target.classList.contains('box')) {
       event.target.appendChild(draggableElement);
-      saveData();
+
     } else if (event.target.parentElement.classList.contains('box')) {
       event.target.parentElement.appendChild(draggableElement);
-      saveData();
+
     }
   });
 });
@@ -43,7 +43,7 @@ dropContainer.addEventListener('drop', function (event) {
     element.remove();
   }
 
-  saveData();
+
 
 });
 
@@ -58,7 +58,7 @@ function addDragAndDropListeners(draggableElement) {
 }
 
 // Import Functions
-import {saveData} from './browserStorage.js';
+
 
 // Export Functions
 export {addDragAndDropListeners};
