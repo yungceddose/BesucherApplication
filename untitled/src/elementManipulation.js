@@ -21,11 +21,11 @@ function addUserToBox(target){
 // Create Element Funktion
 
 function elementManipulation(eingabe, target){
+
   const newElement=document.createElement("div");
   const guestType=document.getElementById("guest-type").value;
   const date=Date.now();
-
-
+  let targetElement=document.getElementById(target);
 
   const elementId=guestType.toUpperCase()+"-"+eingabe+"-"+date;
   newElement.id=eingabe.trim();
@@ -35,8 +35,11 @@ function elementManipulation(eingabe, target){
   newElement.setAttribute("name",eingabe.trim());
   newElement.setAttribute("guestType",guestType);
   newElement.setAttribute("date", date.toString());
-  newElement.setAttribute("container", target.id);
-
+  newElement.setAttribute("container", targetElement.id);
+  console.log(newElement.getAttribute("name"));
+  console.log(newElement.getAttribute("guestType"));
+  console.log(newElement.getAttribute("date"));
+  console.log(newElement.getAttribute("container"));
 
   // Drag-Event hinzufügen
   newElement.addEventListener('dragstart', function (event) {
@@ -84,12 +87,33 @@ function deleteEingabe(){
 function deleteElement(element, target){
   let name=element.id;
   target.removeChild(document.getElementById(name));
+  deleteElementFromArray(element);
+}
+
+// Funktion um ein Element anhand der ID aus dem Array löschen
+
+function deleteElementFromArray(element){
+  let elementId=element.id;
+
   for(let i=0; i<elementArr.length; i++){
-    if(elementArr[i].getAttribute("name")===name){
+    if(elementArr[i].getAttribute("name")===elementId){
       elementArr.splice(i,1);
       console.log("Element gelöscht");
     }
   }
+
+}
+
+
+// Funktion um das Container-Attribut zu ändern
+function changeContainer(newContainer, element){
+
+  let elementId=element.id;
+  let elementObj=document.getElementById(elementId);
+
+  elementObj.setAttribute("container",newContainer.getAttribute("data-container"));
+
+
 }
 
 
@@ -98,4 +122,4 @@ function deleteElement(element, target){
 import {getAllContainers, checkIfGuestExistsInContainer, moveGuest} from './containerLogic.js';
 
 // Export Functions
-export {deleteElement, deleteButton, elementManipulation, addUserToBox};
+export {deleteElement, deleteButton, elementManipulation, addUserToBox, deleteElementFromArray, changeContainer};

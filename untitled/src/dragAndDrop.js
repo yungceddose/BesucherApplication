@@ -16,10 +16,13 @@ document.querySelectorAll('.box').forEach(container => {
     event.preventDefault(); // Verhindere das Standardverhalten
     const draggableElementId = event.dataTransfer.getData('text/plain');
     const draggableElement = document.getElementById(draggableElementId);
+    let targetContainer= event.target;
+
 
     // Nur ablegen, wenn der Drop-Bereich eine Box ist
     if (event.target.classList.contains('box')) {
       event.target.appendChild(draggableElement);
+      changeContainer(targetContainer, draggableElement);
 
     } else if (event.target.parentElement.classList.contains('box')) {
       event.target.parentElement.appendChild(draggableElement);
@@ -40,8 +43,9 @@ dropContainer.addEventListener('drop', function (event) {
 
   // Entferne dragged Element
   if (element) {
+    let elementID=element.id;
     element.remove();
-
+    deleteElementFromArray(element);
   }
 
 
@@ -59,7 +63,7 @@ function addDragAndDropListeners(draggableElement) {
 }
 
 // Import Functions
-import {deleteElement} from './elementManipulation.js';
+import {deleteElementFromArray, changeContainer} from './elementManipulation.js';
 
 // Export Functions
 export {addDragAndDropListeners};

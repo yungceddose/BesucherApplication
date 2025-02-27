@@ -7,9 +7,13 @@ function getAllContainers(){
 // Gast in anderen Container verschieben
  function moveGuest(oldContainer, newContainer, newElement){
 
+  let newContainerId=newContainer.id;
 
   deleteElement(newElement,oldContainer);
   document.getElementById(newContainer).appendChild(newElement);
+  console.log(newElement.getAttribute("container"));
+
+
   return true;
 }
 
@@ -40,3 +44,6 @@ function checkIfGuestExistsInContainer(target, newElement){
 
 // Exports
 export {getAllContainers, moveGuest, checkIfGuestExistsInContainer};
+
+// Import
+import{deleteElement} from './elementManipulation.js';

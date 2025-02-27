@@ -16,7 +16,7 @@ document.getElementById('löschen-button').addEventListener('click', function ()
 });
 
 document.getElementById("speichern-button").addEventListener("click", function(){
-  // Save Data Funktion
+  saveData();
 });
 
 document.getElementById("laden-button").addEventListener("click", function(){
@@ -33,5 +33,5 @@ document.getElementById("clear-filter-button").addEventListener("click", functio
 
 // Import Functions
 import {deleteButton, addUserToBox} from './elementManipulation.js';
-
+import {saveData} from './jsonStorage.js';
 import {filterData, clearFilter} from './filter.js';
