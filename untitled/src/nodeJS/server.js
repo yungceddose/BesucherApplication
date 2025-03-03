@@ -9,11 +9,11 @@ const __filename=fileURLToPath(import.meta.url);
 const __dirname=path.dirname(__filename);
 
 // Verzeichnis für statische Dateien bereit stellen
-app.use(express.static(path.join(__dirname,'public')));
+  app.use(express.static(path.join(__dirname,'./src','./nodeJS')));
 
 // Fallback Route für Index-Seite
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname,'public','index.html'));
+  res.sendFile(path.join(__dirname,'index.html'));
 })
 
 /*
@@ -21,5 +21,5 @@ app.get('/', function (req, res) {
   res.status(200).send("<h1>Hello World!</h1>");
 })
 */
-app.listen(port,()=> console.log("Seerver has started on port: "+port));
+app.listen(port,()=> console.log("Server has started on port: "+port));
 
