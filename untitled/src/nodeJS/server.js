@@ -9,7 +9,8 @@ const __filename=fileURLToPath(import.meta.url);
 const __dirname=path.dirname(__filename);
 
 // Verzeichnis für statische Dateien bereit stellen
-  app.use(express.static(path.join(__dirname,'./src','./nodeJS')));
+  app.use(express.static(path.join(__dirname)));
+
 
 // Fallback Route für Index-Seite
 app.get("/", (req, res) => {

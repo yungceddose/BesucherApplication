@@ -1,6 +1,6 @@
 // client.js
 
-import { getElementArray } from '../jsonStorage.js';
+import { getElementArray } from './jsonStorage.js';
 
 const elementArray=getElementArray();
 
