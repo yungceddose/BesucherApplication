@@ -1,5 +1,5 @@
 // client.js
-
+/*
 import { getElementArray } from './jsonStorage.js';
 
 const elementArray=getElementArray();
@@ -19,3 +19,5 @@ fetch('http://localhost:3000/saveData', {
   .catch((error) => {
     console.error('Fehler:', error);
   });
+
+ */
